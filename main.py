@@ -46,7 +46,6 @@ if __name__ == "__main__":
 
                     normalized_html = src.parser.normalize_html(response.text)
 
-                    # TODO: Можно объединить
                     if not src.database.contentdb.exists(link):
                         logger.info(f"[Loop-check-updates] {link} does not exist in content database. Possibly a new/initial link")
                         src.database.contentdb.insert(link, content=normalized_html, content_type=content_type)
