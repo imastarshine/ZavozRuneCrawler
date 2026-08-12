@@ -1,0 +1,8 @@
+.idea/
+.venv/
+logs/
+data/*.db
+.env
+__pycache__/
+.DS_Store
+poetry.lock
