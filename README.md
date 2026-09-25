@@ -1,13 +1,13 @@
 # ZavozRune Crawler
 ---
-ZavozRune Crawler, it's a basic python project, that scans and visits all domain-only links from certain webpages. On new link or content on page it sends a message to telegram channel/direct message.
-This project specially developed for crawling [DELTARUNE](https://www.deltarune.com/) webpage. But it can be easily set up for any other websites
+ZavozRune Crawler is a basic Python project, that scans and visits all domain-only links from certain webpages. On new link or content on page it sends a message to telegram channel/direct message.
+This project was specially developed for crawling [DELTARUNE](https://www.deltarune.com/) webpage. But it can be easily set up for any other websites
 
-## Let's set up this on your system
+## Let's set this up on your system
 
 1. Clone repository
 ```bash
-git clone https://github.com/imastarshine/ZavozRuneCrwaler.git
+git clone https://github.com/imastarshine/ZavozRuneCrawler.git
 ```
 
 2. Install all dependencies (requires: Python >= 3.12 and Poetry)
@@ -38,7 +38,7 @@ Input new link
 poetry run python3 main.py
 ```
 
-6. Or you can set up it like Unit
+6. Or you can set it up as a systemd service 
 ```ini
 [Unit]
 Description=Zavoz Rune Crawler
@@ -46,8 +46,8 @@ After=network.target
 [Service]
 User=<ANY>
 UMask=0002
-WorkingDirectory=<YOUR DIR>
-ExecStart=<YOUR DIR>/.venv/bin/python <YOUR DIR>/main.py
+WorkingDirectory=<YOUR_DIR>
+ExecStart=<YOUR DIR>/.venv/bin/python <YOUR_DIR>/main.py
 Restart=always
 RestartSec=1800
 Environment=PYTHONUNBUFFERED=1
